@@ -2,4 +2,4 @@
 
 ![](https://github.com/PerfMa/xpocket-plugin-perf/blob/main/resourse/xpocket.jpg)
 
-xpocket-plugin-pstack
+xpocket-plugin-pstack 插件
