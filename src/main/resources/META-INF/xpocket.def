@@ -1,0 +1,4 @@
+plugin-name=xpocket-pstack
+plugin-namespace=XPOCKET
+plugin-version=1.0.0-SNAPSHOT
+main-implementation=com.perfma.xlab.xpocket.plugin.pstack.PStackXPocketPlugin
