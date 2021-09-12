@@ -1,4 +1,6 @@
-plugin-name=xpocket-pstack
+plugin-name=pstack
 plugin-namespace=LINUX
 plugin-version=1.0.0-SNAPSHOT
+plugin-author=jihe
+plugin-project=https://github.com/oliverschen/xpocket-plugin-pstack
 main-implementation=com.perfma.xlab.xpocket.plugin.pstack.PStackXPocketPlugin
