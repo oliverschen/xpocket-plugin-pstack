@@ -17,7 +17,18 @@ public class PStackAdapter {
 
 
     public static void invoke(XPocketProcess process) {
-        String cmd = parseCommandStr(process.getCmd(),process.getArgs());
+        String[] args = process.getArgs();
+        if (args.length == 0) {
+            process.output("please check args PID");
+            process.end();
+            return;
+        }
+        if (args.length > 1) {
+            process.output("Usage: pstack <process-id>");
+            process.end();
+            return;
+        }
+        String cmd = parseCommandStr(process.getCmd(), args);
         String result = execCommand(cmd);
         process.output(result);
         process.end();
@@ -39,8 +50,7 @@ public class PStackAdapter {
             return out.toString(Charset.defaultCharset().toString()) +
                     err.toString(Charset.defaultCharset().toString());
         } catch (IOException e) {
-            e.printStackTrace();
-            return e.getMessage();
+            return "Cannot run program 'pstack'";
         }
     }
 
